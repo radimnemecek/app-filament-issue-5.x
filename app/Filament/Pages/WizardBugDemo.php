@@ -2,18 +2,20 @@
 
 namespace App\Filament\Pages;
 
+use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Wizard\Step;
+use Filament\Support\Icons\Heroicon;
 
 class WizardBugDemo extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-bug-ant';
+    protected static BackedEnum|string|null $navigationIcon = Heroicon::OutlinedBugAnt;
 
     protected static ?string $title = 'Wizard Bug Demo';
 
-    protected static string $view = 'filament.pages.wizard-bug-demo';
+    protected string $view = 'filament.pages.wizard-bug-demo';
 
     protected function getHeaderActions(): array
     {
